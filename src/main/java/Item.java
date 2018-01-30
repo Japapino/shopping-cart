@@ -23,9 +23,13 @@ public class Item {
 		return quantity;
 	}
 	
+	public double getTotalPrice() {
+		return quantity*price;
+	}
+	
 	@Override
 	public String toString() {
-		return "Item: " + itemName + " Quantity: " + quantity + " Price: " + price; 
+		return "Item: " + itemName + " Quantity: " + quantity + " Total Price: " + price*quantity; 
 	}
 
 }
