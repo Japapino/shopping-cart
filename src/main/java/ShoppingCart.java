@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +23,6 @@ public class ShoppingCart {
 	}
 
 	public void removeItem(String item) {
-		// TODO Auto-generated method stub
 		for (int i = cart.size() - 1; i >= 0; i--) {
 			if (cart.get(i).getItemName().equals(item)) {
 				cart.remove(i);
@@ -35,15 +35,18 @@ public class ShoppingCart {
 		for (Item order : cart) {
 			runningTotal += order.getTotalPrice();
 		}
+		DecimalFormat f = new DecimalFormat("##.00");
+		
 		return runningTotal;
 	}
 
 	public void showCart() {
 		for (Item order : cart) {
-			System.out.println("Item: " + order.getItemName() + "Quantity: " + order.getItemQuantity() + "Price: "
-					+ order.getTotalPrice());
-
+			System.out.println("Item: " + order.getItemName() + " || Quantity: " + order.getItemQuantity()
+					+ " || Price: " + order.getTotalPrice());
 		}
+		System.out.println("Current Total: " + this.getSubtotal());
+
 	}
 
 }

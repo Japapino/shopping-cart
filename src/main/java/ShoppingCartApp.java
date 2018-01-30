@@ -12,7 +12,7 @@ public class ShoppingCartApp {
 	System.out.println(myCart.getTotalItems());
 	
 	System.out.println("Here are the current over view of your cart: ");
-	
+	myCart.showCart(); 
 	
 	
 

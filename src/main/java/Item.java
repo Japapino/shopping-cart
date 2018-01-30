@@ -15,7 +15,7 @@ public class Item {
 		return itemName;
 	}
 
-	public double getItemPrice() {
+	public double getUnitPrice() {
 		return price;
 	}
 
