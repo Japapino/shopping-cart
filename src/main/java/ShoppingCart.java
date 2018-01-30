@@ -1,28 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class ShoppingCart {
 	
-	private String item;
-	private int numItems; 
-	private double subTotal; 
+	private List<Item> cart = new ArrayList<>();
 	
-	public ShoppingCart() {
-		
+
+	public void addItem(Item theItem) {
+		cart.add(theItem); 
 	}
 	
-	public ShoppingCart(String items, int subTotal) {
-		this.item = item; 
-		this.numItems = numItems; 
+	public int listSize() {
+		return cart.size(); 
 	}
 	
-	public String getItem() {
-		return item; 
-	}
-	
-	public int getNumItems() {
-		return numItems;
-	}
-	
-	public int getSubTotal() {
-		return subTotal;
-	}
 }

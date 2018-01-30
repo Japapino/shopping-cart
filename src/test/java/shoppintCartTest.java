@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
@@ -9,20 +10,15 @@ public class shoppintCartTest {
 		assertNotNull(underTest); 		
 	}
 	
-	@Test
-	public void shouldInstantiateAShoppingCartObjectWithVarietyAndAmount() {
-		ShoppingCart underTest = new ShoppingCart("",0);
-		assertNotNull(underTest); 
-	}
-	
-	@Test
-	public void shouldReturnCartItemAsShoes() {
-		ShoppingCart underTest = new ShoppingCart("Shoes",0);
-		String check - underTest.getItem(); 
-		assertEquals("Shoes", check); 
+	@Test public void assertThatAnItemHasBeenAdded() {
+		ShoppingCart underTest = new ShoppingCart();
+		underTest.addItem(new Item("",0,0));
+		int check = underTest.listSize(); 
+		assertEquals(1,check); 
 		
 	}
 	
+
 	
 
 }
