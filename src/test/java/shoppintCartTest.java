@@ -46,12 +46,22 @@ public class shoppintCartTest {
 	@Test
 	public void assertThatAnItemHasBeenRemoved() {
 		ShoppingCart underTest = new ShoppingCart(); 
-		underTest.addItem(new Item("Shoes", 2, 10.99));
-		underTest.addItem(new Item("Shirt", 3, 5.99));
+		underTest.addItem(new Item("Shoes", 2, 0));
+		underTest.addItem(new Item("Shirt", 3, 0));
 		underTest.removeItem("Shirt");
 		int check = underTest.listSize(); 
 		assertEquals(1,check);
 	}
+	
+	@Test
+	public void assertThatSubtotalEquals10() {
+		ShoppingCart underTest = new ShoppingCart(); 
+		underTest.addItem(new Item("Shoes", 2, 10.99));
+		underTest.addItem(new Item("Shirt", 3, 5.01));
+		double check = underTest.getSubtotal(); 
+		assertEquals(37.01, check, 0.001);
+	}
+	
 	
 
 	

@@ -25,4 +25,9 @@ public class ItemTest {
 		double check = underTest.getItemPrice(); 
 		assertEquals(10.99, check,0.001); 
 	}
+	
+	@Override
+	public String toString() {
+		return "Item: " + itemName + " Quantity: " + quantity + " Total Price: " + price*quantity; 
+	}
 }
