@@ -14,5 +14,15 @@ public class shoppintCartTest {
 		ShoppingCart underTest = new ShoppingCart("",0);
 		assertNotNull(underTest); 
 	}
+	
+	@Test
+	public void shouldReturnCartItemAsShoes() {
+		ShoppingCart underTest = new ShoppingCart("Shoes",0);
+		String check - underTest.getItem(); 
+		assertEquals("Shoes", check); 
+		
+	}
+	
+	
 
 }
