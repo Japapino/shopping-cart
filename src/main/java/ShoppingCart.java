@@ -35,7 +35,6 @@ public class ShoppingCart {
 		for (Item order : cart) {
 			runningTotal += order.getTotalPrice();
 		}
-		DecimalFormat f = new DecimalFormat("##.00");
 		
 		return runningTotal;
 	}
